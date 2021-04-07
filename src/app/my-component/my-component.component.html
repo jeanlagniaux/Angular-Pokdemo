@@ -11,12 +11,7 @@
     Go
 </button>
 
-<p>mon pokemon sélectionné est : {{pokeDetail?.name}}</p>
-
 <div *ngIf="pokeDetail">
-    <ul>
-        <li *ngFor="let ability of pokeDetail?.abilities">
-            {{ability.ability.name}}
-        </li>
-    </ul>
+    <app-poke-detail [detail]="pokeDetail"></app-poke-detail>
+    
 </div>
