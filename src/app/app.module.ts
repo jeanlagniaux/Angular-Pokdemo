@@ -9,6 +9,8 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { FilterPokemonPipePipe } from './filter-pokemon--pipe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokeDetailComponent } from './poke-detail/poke-detail.component';
+import {CalendarModule} from 'primeng/calendar';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { PokeDetailComponent } from './poke-detail/poke-detail.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CalendarModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatSliderModule

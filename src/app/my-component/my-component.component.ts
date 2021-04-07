@@ -15,6 +15,8 @@ export class MyComponentComponent implements OnInit {
   searchPokemonName = '';
   pokes: Pokemon[] = [];
   pokeDetail!: PokeDetail;
+
+  myDate!: Date;
   constructor(private pokeService: PokeAPIService, private PokeShareInfoService: PokShareInfoService) {
   }
 
@@ -25,7 +27,7 @@ export class MyComponentComponent implements OnInit {
     if (this.selectedPokeId != null) {
       this.pokeService.getPokemonInfo(this.selectedPokeId.id).subscribe((data) => {
         this.pokeDetail = data
-        this.PokeShareInfoService.setValue(this.selectedPokeId.id);
+        this.PokeShareInfoService.setValue(this.selectedPokeId.name);
       });
     }
   }
