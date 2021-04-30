@@ -34,6 +34,7 @@ export class MyComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokeService.getPokemon().subscribe((data) => {
+      console.log(data)
       data.results.forEach((e, index) => {
         this.pokes.push(new Pokemon('' + index, e.name, e.url));
       });
